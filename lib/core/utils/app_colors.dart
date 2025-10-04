@@ -4,6 +4,7 @@ class AppColors {
   static const Color primaryColor = Color(0xFF5436F8);
   static const Color secondary = Color(0xFF16103C);
   static const Color purple700 = Color(0xFF18153F);
+  static const Color purple = Color(0xFFA49AD8);
   static const Color darkBG = Color(0xFF0D0D0D);
   static const Color black = Colors.black;
   static const Color black2 = Color(0xFF252531);

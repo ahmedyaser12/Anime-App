@@ -1,6 +1,7 @@
 import 'package:anime_live/core/utils/app_colors.dart';
 import 'package:anime_live/core/utils/assets_manager.dart';
 import 'package:anime_live/core/utils/styles.dart';
+import 'package:anime_live/features/upgrade/presentation/screens/upgrade_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,16 +27,18 @@ class AnimeDetailsScreen extends StatelessWidget {
             child: Column(
               children: [
                 // Top anime image with height 512
-                Stack(clipBehavior: Clip.none,
+                Stack(
+                  clipBehavior: Clip.none,
                   alignment: Alignment.center,
-                  children: [Image.asset(
-                    image,
-                    height: 512,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
+                  children: [
+                    Image.asset(
+                      image,
+                      height: 512,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
 
-                     Positioned(
+                    Positioned(
                       bottom: -70, // Half of the SVG height extends outside
                       child: SvgPicture.asset(
                         AssetsManager.demon,
@@ -43,8 +46,7 @@ class AnimeDetailsScreen extends StatelessWidget {
                         width: 140,
                       ),
                     ),
-
-                  ]
+                  ],
                 ),
 
                 // Vertical space 76
@@ -78,7 +80,10 @@ class AnimeDetailsScreen extends StatelessWidget {
 
                 // Stats section
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -162,7 +167,14 @@ class AnimeDetailsScreen extends StatelessWidget {
                   horizontal: 28,
                   vertical: 12,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UpgradeScreen(),
+                    ),
+                  );
+                },
                 heroTag: 'Watch Now',
                 backgroundColor: AppColors.primaryColor,
                 icon: SvgPicture.asset(

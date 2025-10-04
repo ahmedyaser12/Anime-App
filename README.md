@@ -1,16 +1,110 @@
-# anime_live
+# 🎬 Anime Live
 
-A new Flutter project.
+A modern Flutter application for streaming and discovering anime content with premium subscription features.
 
-## Getting Started
+## 📱 Features
 
-This project is a starting point for a Flutter application.
+- 🏠 **Home Screen** - Browse and discover anime with beautiful cards and categories
+- 📖 **Details Screen** - View detailed anime information, episodes, and ratings
+- 💎 **Upgrade Screen** - Premium subscription plans with Monthly and Annual options
+- 🎨 **Modern UI** - Clean, intuitive interface with smooth animations
+- 👨‍👩‍👧‍👦 **Family Sharing** - Share your subscription with family members
 
-A few resources to get you started if this is your first Flutter project:
+## 🎥 Demo Video
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> **Note:** A detailed walkthrough video will be uploaded to explain the app's features and architecture.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗️ Project Structure
+
+The project follows **Clean Architecture** principles with feature-based organization:
+
+```
+lib/
+├── core/                    # Shared resources
+│   ├── constants/          # Colors, strings, routes
+│   ├── utils/              # Helper functions
+│   └── widgets/            # Reusable widgets
+│
+├── features/               # Feature modules
+│   ├── home/              # Home screen feature
+│   ├── details/           # Details screen feature
+│   └── upgrade/           # Subscription feature
+│       ├── data/          # Data layer
+│       └── presentation/  # UI layer
+│           ├── screens/
+│           └── widgets/
+│
+└── main.dart              # App entry point
+```
+
+### Architecture Layers
+
+Each feature is organized into:
+- **Data Layer**: Models,
+- **Presentation Layer**: Screens and feature-specific widgets
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK (>=3.0.0)
+- Dart SDK (>=3.0.0)
+- Android Studio / VS Code
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/ahmedyaser12/Anime_App.git
+cd anime_live
+```
+
+2. Install dependencies
+```bash
+flutter pub get
+```
+
+3. Run the app
+```bash
+flutter run
+```
+
+## 📱 Screens
+
+### 1. Home Screen
+- Anime browsing grid/list
+- Category filters
+- Search functionality
+- Featured anime section
+
+### 2. Details Screen
+- Anime cover and information
+- Watch/Preview episodes
+
+### 3. Upgrade Screen
+- **Monthly Plan**: $5 USD/Month
+- **Annual Plan**: $50 USD/Year
+- Family sharing feature included
+- Interactive plan selection
+
+## 🛠️ Built With
+
+- **Flutter** - UI framework
+- **Dart** - Programming language
+- **Clean Architecture** - Design pattern
+
+### Build
+```bash
+# Android
+flutter build apk
+
+# iOS
+flutter build ios
+```
+
+## 📞 Contact
+
+- GitHub: [@ahmedyaser12](https://github.com/ahmedyaser12)
+- Email: ahmedyaserramadan456@gmail.com
+
+**Made with ❤️ using Flutter**

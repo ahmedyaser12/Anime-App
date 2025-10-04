@@ -20,43 +20,57 @@ class UpgradeScreen extends StatelessWidget {
             fit: BoxFit.fill,
           ),
 
-          Column(
-            children: [
-              const UpgradeRow(),
-              verticalSpace(9),
-
-              Image.asset('assets/images/Rocket Boy 1.svg', fit: BoxFit.fill),
-              verticalSpace(4),
-              Text(
-                'Seamless Anime\n Experience, Ad-Free.',
-                style: Styles.font14PrimaryW700.copyWith(fontSize: 24),
-              ),
-              verticalSpace(4),
-              Text(
-                'Enjoy unlimited anime streaming without\n interruptions.',
-                style: Styles.font12greyLightW500.copyWith(fontSize: 14),
-              ),
-              verticalSpace(40),
-              SubscriptionPlans(),
-              verticalSpace(40),
-              Container(
-                height: 50,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: AppColors.primaryColor,
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                child: Center(
-                  child: Text(
-                    'Continue',
-                    style: Styles.font14WhiteW800.copyWith(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  verticalSpace(50),
+                  const UpgradeRow(),
+                  verticalSpace(9),
+                  Image.asset(
+                    'assets/images/rocket_icon.png',
+                    height: 200,
+                    width: 200,
+                  ),
+                  verticalSpace(4),
+                  Text(
+                    'Seamless Anime\n Experience, Ad-Free.',
+                    style: Styles.font14PrimaryW700.copyWith(
+                      fontSize: 24,
+                      color: AppColors.secondary,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  verticalSpace(4),
+                  Text(
+                    'Enjoy unlimited anime streaming without\n interruptions.',
+                    style: Styles.font12greyLightW500.copyWith(fontSize: 14),
+                    textAlign: TextAlign.center,
+                  ),
+                  verticalSpace(40),
+                  SubscribeButtons(),
+                  verticalSpace(40),
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Continue',
+                        style: Styles.font14WhiteW800.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ],
       ),

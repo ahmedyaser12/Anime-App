@@ -17,21 +17,22 @@ class UpgradeRow extends StatelessWidget {
         ),
         // X icon on the right
         Positioned(
-          right: 0,
+          right: 22,
           top: 0,
           bottom: 0,
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Color(0xFF8B5CF6), width: 2),
-              borderRadius: BorderRadius.circular(4),
-            ),
-            child: IconButton(
-              icon: Icon(Icons.close),
-              color: Color(0xFF8B5CF6),
-              onPressed: () {
-                // Handle close action
-                Navigator.pop(context);
-              },
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              alignment: Alignment.center,
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
+              child: const Icon(Icons.close),
             ),
           ),
         ),
