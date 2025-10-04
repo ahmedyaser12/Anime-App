@@ -14,16 +14,16 @@ A modern Flutter application for streaming and discovering anime content with pr
 
 > **Note:** A detailed walkthrough video will be uploaded to explain the app's features and architecture.
 
+![video2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/cea0d8e7-b0a2-4079-a705-2e73b85366ec)
+
 ## 🏗️ Project Structure
 
 The project follows **Clean Architecture** principles with feature-based organization:
 
 ```
 lib/
-├── core/                    # Shared resources
-│   ├── constants/          # Colors, strings, routes
-│   ├── utils/              # Helper functions
-│   └── widgets/            # Reusable widgets
+├── core/                    # Shared resources         
+│   └── utils/              # Colors,styles,assets,spacing 
 │
 ├── features/               # Feature modules
 │   ├── home/              # Home screen feature
